@@ -15,7 +15,7 @@ export const SITE = {
   phone: "9005279049",
   phoneDisplay: "+91 90052 79049",
   whatsapp: "9005279049", // country code ke bina, sirf number
-  email: "arpitfurnitureworks@gmail.com",
+  email: "kumaranil4044@gmail.com",
 
   /* ---- social media (apne page ka link yahan likho) ---- */
   social: {

@@ -1,0 +1,12 @@
+[debug] [2026-09-28T00:13:27.102Z] ----------------------------------------------------------------------
+[debug] [2026-09-28T00:13:27.115Z] Command:       C:\Users\kumar\AppData\Local\Programs\nodejs\node.exe C:\Users\kumar\AppData\Local\Programs\nodejs\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2026-09-28T00:13:27.116Z] CLI Version:   15.31.0
+[debug] [2026-09-28T00:13:27.116Z] Platform:      win32
+[debug] [2026-09-28T00:13:27.116Z] Node Version:  v24.19.0
+[debug] [2026-09-28T00:13:27.116Z] Detected Agent: unknown
+[debug] [2026-09-28T00:13:27.117Z] Time:          Mon Sep 28 2026 05:43:27 GMT+0530 (India Standard Time)
+[debug] [2026-09-28T00:13:27.117Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  The Firebase CLI’s MCP server feature can optionally make use of Gemini in Firebase. Learn more about Gemini in Firebase and how it uses your data: https://firebase.google.com/docs/gemini-in-firebase#how-gemini-in-firebase-uses-your-data 
+[info] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you. 

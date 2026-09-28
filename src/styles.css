@@ -1170,7 +1170,8 @@
 /* ============ 16. FOOTER ============ */
 .footer { background: var(--wood-950); color: var(--on-wood); padding: 4rem 0 1.75rem; margin-top: 3rem; }
 .foot-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 3rem; padding-bottom: 3rem; }
-.foot-col h4 {
+.foot-col h4,
+.foot-col h2.foot-head {
   font-size: 0.7rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;

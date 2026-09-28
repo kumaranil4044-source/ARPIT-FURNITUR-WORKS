@@ -234,8 +234,8 @@ export default function Home() {
         <div className="container">
           <div className="how-panel">
             <div className="how-copy">
-              <span className="eyebrow">Our Process</span>
-              <h1 className="how-title">3 step. Bas itna hi.</h1>
+              <h1 className="how-kicker">Our Process</h1>
+              <h2 className="how-title">3 step. Bas itna hi.</h2>
               <p>
                 Na online payment ka jhagda, na koi form bhari. Ek message karo,
                 hum baat kar lenge.

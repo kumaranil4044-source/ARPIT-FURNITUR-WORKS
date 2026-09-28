@@ -1542,3 +1542,12 @@
 /* Footer owner photo */
 .foot-owner { width: 96px; height: 96px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent-soft); margin-bottom: 0.9rem; }
 
+
+/* Logo + owner + social */
+.brand-mark img { width: 42px; height: 42px; border-radius: 10px; display: block; }
+.foot-logo-img { width: 52px; height: 52px; border-radius: 12px; margin-bottom: 0.8rem; }
+.foot-owner-name { font-size: 0.82rem; color: var(--muted); margin: -0.4rem 0 0.8rem; }
+.foot-social { display: flex; gap: 0.7rem; margin-top: 0.9rem; }
+.foot-social a { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--line); color: var(--ink-soft); }
+.foot-social a:hover { border-color: var(--accent); color: var(--accent); }
+

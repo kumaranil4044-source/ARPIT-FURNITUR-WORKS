@@ -17,6 +17,16 @@ export const SITE = {
   whatsapp: "9005279049", // country code ke bina, sirf number
   email: "arpitfurnitureworks@gmail.com",
 
+  /* ---- social media (apne page ka link yahan likho) ---- */
+  social: {
+    instagram: "", // jaise: "https://instagram.com/arpitfurniture"
+    facebook: "", // jaise: "https://facebook.com/arpitfurniture"
+  },
+
+  /* ---- malik ki photo (public/images/owner.jpg rakho) ---- */
+  ownerPhoto: "/images/owner.jpg",
+  ownerName: "Arpit — Malik, Arpit Furniture Works",
+
   /* ---- address (jhaan pehchaan ke liye SEO bhi) ---- */
   address: {
     line1: "Mahajudwa",

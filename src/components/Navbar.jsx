@@ -54,22 +54,7 @@ export default function Navbar() {
         <div className="container nav-in">
           <Link to="/" className="brand" aria-label={`${SITE.name} home`}>
             <span className="brand-mark">
-              <svg viewBox="0 0 32 32" width="24" height="24" aria-hidden="true">
-                <path
-                  d="M6 26V13l10-7 10 7v13"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M12 26v-8h8v8"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.2"
-                  strokeLinejoin="round"
-                />
-              </svg>
+              <img src="/images/logo.svg" alt="" width="42" height="42" />
             </span>
             <span className="brand-text">
               <strong>{SITE.name}</strong>

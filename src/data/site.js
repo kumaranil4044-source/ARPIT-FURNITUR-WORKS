@@ -24,7 +24,7 @@ export const SITE = {
   },
 
   /* ---- malik ki photo (public/images/owner.jpg rakho) ---- */
-  ownerPhoto: "/images/owner.jpg",
+  ownerPhoto: "/images/owner-photo.jpg?v=2",
   ownerName: "Arpit — Malik, Arpit Furniture Works",
 
   /* ---- address (jhaan pehchaan ke liye SEO bhi) ---- */

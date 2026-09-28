@@ -26,13 +26,13 @@ export default function About() {
               ya WhatsApp kijiye — baat kar lenge.
             </p>
           </div>
-          <div className="about-hero-art">
+          <div className="about-hero-art about-hero-banner">
             <img
-              src="/images/catalog/charpai-2.webp"
-              alt="Charpai ka rassi se bharna"
+              src="/images/about-banner.jpg"
+              alt="Arpit Furniture Works — sofa, bed, almari, dining table, window, darwaza"
               loading="lazy"
               width="1200"
-              height="900"
+              height="800"
             />
           </div>
         </div>

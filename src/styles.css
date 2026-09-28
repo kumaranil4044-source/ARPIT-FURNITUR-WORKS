@@ -1129,6 +1129,7 @@
 .about-hero p { opacity: 0.82; }
 .about-hero-art { border-radius: 8px; overflow: hidden; }
 .about-hero-art img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+.about-hero-banner img { aspect-ratio: 4/3; object-fit: contain; background: #111; }
 @media (max-width: 940px) { .about-hero-in { grid-template-columns: 1fr; } }
 
 .about-split { display: grid; grid-template-columns: 1fr 250px; gap: 3.5rem; align-items: start; }

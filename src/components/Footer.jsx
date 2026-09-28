@@ -12,11 +12,11 @@ export default function Footer() {
         <div className="foot-col foot-brand">
           <img
             className="foot-logo-img"
-            src="/images/logo.svg"
+            src="/images/logo-full.svg"
             alt={`${SITE.name} logo`}
             loading="lazy"
-            width="52"
-            height="52"
+            width="260"
+            height="74"
           />
           <img
             className="foot-owner"

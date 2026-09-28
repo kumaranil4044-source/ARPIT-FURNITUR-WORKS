@@ -1,0 +1,31 @@
+{
+  "name": "arpit-furniture-works",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Arpit Furniture Works and Service - village-style solid wood furniture, Phulpur, Prayagraj",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/slim-dist.mjs",
+    "preview": "vite preview",
+    "images": "node scripts/process-images.mjs",
+    "deploy": "npm run build && firebase deploy --only hosting",
+    "deploy:vercel": "npx vercel --prod",
+    "deploy:netlify": "npx netlify deploy --prod --dir=dist"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "firebase-tools": "^15.31.0",
+    "sharp": "^0.35.4",
+    "vite": "^8.3.1"
+  },
+  "allowScripts": {
+    "re2@1.27.0": true,
+    "protobufjs@7.6.6": true
+  }
+}

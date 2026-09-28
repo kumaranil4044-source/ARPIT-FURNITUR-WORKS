@@ -1,0 +1,23 @@
+# Apache / cPanel ke liye (shared hosting par daalne ke liye)
+# Ye file public/ me honi chahiye — Vite use automatically copy kar deta hai.
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # SPA routing: /shop, /gallery, /product/xyz seedha khulne chahiye
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# Image par 1 saal ka cache
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+</IfModule>

@@ -20,7 +20,7 @@ const USED = new Set([
   // products (imageFallback)
   "charpai-1", "bed-1", "takhat-1", "sofa-1", "singardan-1",
   "dining-1", "table-1", "chair-1",
-  "wardrobe-1", "desk-1", "shop-3", "sofa-2", "bed-2", "heroroom-1",
+  "wardrobe-1", "desk-1", "kitchen-1", "sofa-2", "bed-2", "heroroom-1",
   // banner + gallery + about
   "shop-1", "shop-2", "shop-3", "shop-4",
   "charpai-2", "village-1",

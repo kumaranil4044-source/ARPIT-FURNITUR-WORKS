@@ -257,7 +257,7 @@ export const PRODUCTS = [
     desc: "Rasoi ka poora setup — neeche dabba, upar shelf, slab ke hisaab se fitting. Naap lekar design fix karte hain, phir bana kar fit kar dete hain.",
     care: "Pani turant pochhein. Saal me ek baar kabze-kundli check karayein.",
     stock: 5,
-    ...P("kitchen-01", "shop-3"),
+    ...P("kitchen-01", "kitchen-1"),
   },
 ];
 
@@ -265,7 +265,7 @@ export const getProduct = (id) => PRODUCTS.find((p) => p.id === id);
 
 /* Naap ke hisaab se sahi stock photo — category cards ke liye */
 export const CATEGORY_IMAGE = {
-  Kitchen: "shop-3",
+  Kitchen: "kitchen-1",
   Sofa: "sofa-1",
   Bed: "bed-1",
   Dining: "dining-1",

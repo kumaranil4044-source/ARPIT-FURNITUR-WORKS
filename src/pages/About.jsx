@@ -41,7 +41,32 @@ export default function About() {
       <section className="section">
         <div className="container about-split">
           <div>
-            <h2>Ek saman kaise banta hai</h2>
+            <div className="card owner-card">
+              <img
+                className="owner-photo-lg"
+                src={SITE.ownerPhoto}
+                alt={SITE.ownerName}
+                loading="lazy"
+                width="400"
+                height="400"
+                onError={(e) => { e.currentTarget.style.display = "none"; }}
+              />
+              <div>
+                <h2>{SITE.ownerName}</h2>
+                <p className="muted">Dukaan ke malik — naap, design aur fitting sab khud dekhte hain.</p>
+              </div>
+            </div>
+            <h2 className="mt-3">Hum kya-kya karte hain</h2>
+            <ul className="tick-list">
+              <li>Kitchen — dabba, shelf, slab fitting</li>
+              <li>Sofa — lakdi frame, gadda-kapda</li>
+              <li>Bed — single/double, box wala</li>
+              <li>Dining table — 4/6 kursi set</li>
+              <li>Chair — kursi, chowki</li>
+              <li>Door & Window — darwaza, khidki, kapat</li>
+              <li>Purane furniture ki marammat</li>
+            </ul>
+            <h2 className="mt-3">Ek saman kaise banta hai</h2>
             <ol className="timeline">
               <li>
                 <strong>Aap batayein kya chahiye</strong>

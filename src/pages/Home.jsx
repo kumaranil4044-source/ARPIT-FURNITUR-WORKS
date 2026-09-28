@@ -154,10 +154,19 @@ export default function Home() {
               </Link>
             ))}
           </div>
+          <div className="card service-bullets">
+            <h3>Our Service — ek nazar me</h3>
+            <ul className="tick-list tick-cols">
+              {SERVICES.map((c) => (
+                <li key={c}>
+                  <Link to={`/shop?cat=${c}`}>{c}</Link>
+                </li>
+              ))}
+              <li>Purane furniture ki marammat</li>
+            </ul>
+          </div>
         </div>
       </section>
-
-      {/* ==================== FEATURED ==================== */}
       <section className="section bg-alt-band">
         <div className="container">
           <div className="section-head">

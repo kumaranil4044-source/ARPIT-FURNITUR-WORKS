@@ -74,8 +74,8 @@ export default function Home() {
               >
                 WhatsApp karein
               </a>
-              <Link to="/shop" className="btn btn-ghost btn-lg">
-                Services dekhein
+              <Link to="/shop" className="btn btn-accent btn-lg">
+                Our Service
               </Link>
             </div>
             <dl className="hero-stats">

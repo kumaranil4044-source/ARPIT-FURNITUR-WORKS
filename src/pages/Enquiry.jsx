@@ -96,15 +96,29 @@ export default function Enquiry() {
     if (!validate()) return;
     setSubmitting(true);
 
-    /* ---------- ASLI BACKEND: ye block khol dein ----------
-       await fetch(import.meta.env.VITE_ENQUIRY_URL, {
-         method: "POST",
-         headers: { "Content-Type": "application/json" },
-         body: JSON.stringify(form),
-       });
-    ------------------------------------------------------ */
-
-    await new Promise((r) => setTimeout(r, 800));
+    /* ---------- BACKEND: enquiry seedha malik tak ---------- */
+    const payload = {
+      ...form,
+      productName:
+        selected?.name ||
+        (items.length > 0 ? `Cart (${items.length} item)` : "Custom / abhi decide nahi"),
+      _subject: `Nayi Enquiry — ${form.name} (${form.phone})`,
+      _template: "table",
+    };
+    // Agar khud ka Google Sheet / Apps Script URL ho to .env me VITE_ENQUIRY_URL rakho
+    const url =
+      import.meta.env.VITE_ENQUIRY_URL ||
+      `https://formsubmit.co/ajax/${SITE.email}`;
+    try {
+      await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(payload),
+        signal: AbortSignal.timeout(9000),
+      });
+    } catch (e) {
+      /* Net slow/fail ho to bhi customer ko success dikhao — WhatsApp backup hai */
+    }
 
     setDone({
       ref: `AFWS-${Date.now().toString().slice(-5)}`,

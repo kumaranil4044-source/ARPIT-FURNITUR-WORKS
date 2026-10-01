@@ -7,6 +7,7 @@
 
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { getProduct } from "../data/products";
+import { trackEvent } from "../utils/analytics";
 
 const CartContext = createContext(null);
 const STORAGE_KEY = "darbaar-cart-v1";
@@ -58,6 +59,7 @@ export function CartProvider({ children }) {
       ];
     });
     setIsOpen(true);
+    trackEvent("add_to_cart", { item: productId, wood: chosenWood });
   };
 
   const updateQty = (id, qty) => {

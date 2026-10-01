@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CartDrawer from "./components/CartDrawer";
 import ScrollToTop from "./components/ScrollToTop";
+import Analytics from "./components/Analytics";
 import FloatingContact from "./components/FloatingContact";
 
 import Home from "./pages/Home";
@@ -31,6 +32,7 @@ export default function App() {
     <ThemeProvider>
       <CartProvider>
         <ScrollToTop />
+        <Analytics />
 
         <a href="#main" className="sr-only">Skip to content</a>
 

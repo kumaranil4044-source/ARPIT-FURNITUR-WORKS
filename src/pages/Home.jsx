@@ -4,7 +4,6 @@ import { WOOD_TYPES } from "../data/woodTypes";
 import { SITE, TEL_LINK, waLink } from "../data/site";
 import { useTheme } from "../context/ThemeContext";
 import ProductCard from "../components/ProductCard";
-import ShopBanner from "../components/ShopBanner";
 
 const STEPS = [
   { t: "Consultation & Measurement", d: "Phone/WhatsApp par baat, phir ghar ya dukaan par aakar naap lete hain." },
@@ -37,9 +36,6 @@ export default function Home() {
 
   return (
     <>
-      {/* ===== DUKAAN KA BANNER (sabse upar) ===== */}
-      <ShopBanner />
-
       {/* ==================== HERO (image upar, text neeche) ==================== */}
       <section className="hero-plain">
         <div className="container">

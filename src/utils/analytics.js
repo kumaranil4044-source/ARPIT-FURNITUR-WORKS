@@ -4,7 +4,7 @@
    - ID nahi hai to sab function chup-chaap kuch nahi karte
    ============================================================ */
 
-const GA_ID = import.meta.env.VITE_GA_ID;
+const GA_ID = import.meta.env.VITE_GA_ID || "G-EBQZFGQNW3";
 let loaded = false;
 
 export function initAnalytics() {

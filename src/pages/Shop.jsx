@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { CATEGORIES, PRODUCTS } from "../data/products";
 import { getWood } from "../data/woodTypes";
@@ -22,6 +22,18 @@ export default function Shop() {
   const [sort, setSort] = useState("popular");
   const [q, setQ] = useState("");
   const [inStockOnly, setInStockOnly] = useState(false);
+
+  /* link se aaye cat/wood (jaise /shop?cat=Sofa) ko state me lagao —
+     Home se dusri category dabane par bhi filter turant badle */
+  useEffect(() => {
+    const next = catFromUrl || "All";
+    setCat((prev) => (prev === next ? prev : next));
+  }, [catFromUrl]);
+
+  useEffect(() => {
+    const next = woodFromUrl || "";
+    setWood((prev) => (prev === next ? prev : next));
+  }, [woodFromUrl]);
 
   /* keep the URL in sync so links like /shop?cat=Sofa work */
   const setCategory = (c) => {
@@ -155,7 +167,7 @@ export default function Shop() {
         <div className="results">
           <div className="results-top">
             <p className="results-count">
-              <strong>{list.length}</strong> me se {PRODUCTS.length} dikha rahe hain
+              <strong>{PRODUCTS.length}</strong> me se {list.length} dikha rahe hain
             </p>
             <div className="results-sort">
               <label htmlFor="sort">Sort</label>

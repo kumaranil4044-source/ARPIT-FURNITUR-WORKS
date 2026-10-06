@@ -36,6 +36,18 @@ export default function Home() {
 
   return (
     <>
+      {/* ==================== DUKAAN PHOTO (sabse upar) ==================== */}
+      <section className="shopfront">
+        <div className="container">
+          <img
+            src="/images/shop-front.jpg"
+            alt="Arpit Furniture Works ki dukaan"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+      </section>
+
       {/* ==================== HERO (image upar, text neeche) ==================== */}
       <section className="hero-plain">
         <div className="container">
@@ -149,17 +161,6 @@ export default function Home() {
                 </div>
               </Link>
             ))}
-          </div>
-          <div className="card service-bullets">
-            <h3>Our Service — ek nazar me</h3>
-            <ul className="tick-list tick-cols">
-              {SERVICES.map((c) => (
-                <li key={c}>
-                  <Link to={`/shop?cat=${c}`}>{c}</Link>
-                </li>
-              ))}
-              <li>Purane furniture ki marammat</li>
-            </ul>
           </div>
         </div>
       </section>

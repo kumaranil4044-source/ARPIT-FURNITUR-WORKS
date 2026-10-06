@@ -21,6 +21,10 @@ const USED = new Set([
   "charpai-1", "bed-1", "takhat-1", "sofa-1", "singardan-1",
   "dining-1", "table-1", "chair-1",
   "wardrobe-1", "desk-1", "kitchen-1", "sofa-2", "bed-2", "heroroom-1",
+  "sofa-3", "sofa-4", "sofa-5", "sofa-6", "sofa-7", "sofa-8",
+  "bed-5", "bed-6", "bed-7", "bed-8", "bed-9", "bed-10",
+  "bed-11", "bed-12", "bed-13", "bed-14",
+  "dining-2", "dining-3", "dining-4", "dining-5", "dining-6",
   // banner + gallery + about
   "shop-1", "shop-2", "shop-3", "shop-4",
   "charpai-2", "village-1",

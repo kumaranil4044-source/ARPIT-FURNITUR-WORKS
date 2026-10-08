@@ -32,6 +32,10 @@ const USED = new Set([
   "table-8", "table-9", "table-10", "table-11",
   "kapat-2", "kapat-3", "kapat-4", "kapat-5",
   "takhat-3", "takhat-4", "takhat-5", "takhat-6",
+  "singardan-2", "singardan-3", "singardan-4", "singardan-5",
+  "singardan-6", "singardan-7",
+  "chair-2", "chair-3", "chair-4", "chair-5",
+  "chair-6", "chair-7", "chair-8",
   // banner + gallery + about
   "shop-1", "shop-2", "shop-3", "shop-4",
   "charpai-2", "village-1",

@@ -18,17 +18,7 @@ export default function Footer() {
             width="260"
             height="74"
           />
-          <img
-            className="foot-owner"
-            src={SITE.ownerPhoto}
-            alt={SITE.ownerName}
-            loading="lazy"
-            width="160"
-            height="160"
-            onError={(e) => { e.currentTarget.style.display = "none"; }}
-          />
-          <p className="foot-owner-name">{SITE.ownerName}</p>
-          <h3 className="foot-logo">{SITE.name}</h3>
+          <h3 className="foot-logo">Arpit</h3>
           <p>
             {SITE.address.line1} ke paas, {SITE.address.city} me hamari chhoti si
             dukaan. Lakdi ka charpai, bed, singardan, kursi aur mez — sab haath se

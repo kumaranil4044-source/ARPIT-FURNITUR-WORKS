@@ -186,7 +186,7 @@ export default function About() {
               <a className="btn btn-primary btn-lg" href={MAPS_LINK} target="_blank" rel="noreferrer">
                 Map par dekhein
               </a>
-              <Link to="/enquiry" className="btn btn-ghost btn-lg">
+              <Link to="/enquiry" className="btn btn-primary btn-lg">
                 Naap bhejein
               </Link>
             </div>

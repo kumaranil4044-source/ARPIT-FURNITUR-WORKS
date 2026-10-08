@@ -90,7 +90,7 @@ export default function Gallery() {
             <a className="btn btn-primary btn-lg" href={TEL_LINK}>
               {SITE.phoneDisplay}
             </a>
-            <Link to="/enquiry" className="btn btn-ghost btn-lg">
+            <Link to="/enquiry" className="btn btn-primary btn-lg">
               Enquiry bharen
             </Link>
           </div>

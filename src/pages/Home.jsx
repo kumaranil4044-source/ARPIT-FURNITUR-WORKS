@@ -286,7 +286,7 @@ export default function Home() {
               <a className="btn btn-primary btn-lg" href={TEL_LINK}>
                 Call karein
               </a>
-              <Link to="/enquiry" className="btn btn-ghost btn-lg">
+              <Link to="/enquiry" className="btn btn-primary btn-lg">
                 Enquiry bharen
               </Link>
             </div>

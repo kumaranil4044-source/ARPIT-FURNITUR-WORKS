@@ -39,7 +39,7 @@ export default function Reviews() {
           <div className="center mt-4 flex gap-1 wrap" style={{ justifyContent: "center" }}>
             <a className="btn btn-primary btn-lg" href={TEL_LINK}>Call karein</a>
             <a className="btn btn-wa btn-lg" href={waLink("Namaste! Mujhe furniture banwana hai.")} target="_blank" rel="noreferrer">WhatsApp karein</a>
-            <Link to="/enquiry" className="btn btn-ghost btn-lg">Enquiry bharen</Link>
+            <Link to="/enquiry" className="btn btn-primary btn-lg">Enquiry bharen</Link>
           </div>
         </div>
       </section>

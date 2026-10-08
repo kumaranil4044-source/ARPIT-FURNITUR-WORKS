@@ -17,7 +17,6 @@ const TRUST = [
   { ic: "🪵", t: "Asli lakdi", d: "Koi particle board nahi. Jo lakdi dikhti hai wahi sachchi hai." },
   { ic: "✂️", t: "Size aapki", d: "Chhota ho ya bada — aapke ghar ke hisaab se banayenge." },
   { ic: "🧵", t: "Haath ka kaam", d: "Charpai ka rassi har ghar me alag tarah se bhara jaata hai." },
-  { ic: "🛵", t: "Pahunchai", d: "Prayagraj aur aas-paas ke gharon tak, chhota bade ghar bhi." },
 ];
 
 const REVIEWS = [

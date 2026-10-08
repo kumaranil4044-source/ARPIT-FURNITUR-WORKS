@@ -18,7 +18,6 @@ export default function Footer() {
             width="260"
             height="74"
           />
-          <h3 className="foot-logo">Arpit</h3>
           <p>
             {SITE.address.line1} ke paas, {SITE.address.city} me hamari chhoti si
             dukaan. Lakdi ka charpai, bed, singardan, kursi aur mez — sab haath se

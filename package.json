@@ -6,7 +6,7 @@
   "description": "Arpit Furniture Works and Service - village-style solid wood furniture, Phulpur, Prayagraj",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/slim-dist.mjs",
+    "build": "node scripts/sitemap.mjs && vite build && node scripts/slim-dist.mjs",
     "preview": "vite preview",
     "images": "node scripts/process-images.mjs",
     "deploy": "npm run build && firebase deploy --only hosting",

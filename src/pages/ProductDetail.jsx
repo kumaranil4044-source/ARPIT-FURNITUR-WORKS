@@ -28,6 +28,21 @@ export default function ProductDetail() {
   const [qty, setQty] = useState(1);
   const [added, setAdded] = useState(false);
   const [tab, setTab] = useState("details");
+  const [zoom, setZoom] = useState(false); // photo badi karke dekhna
+
+  /* lightbox — Escape se band */
+  useEffect(() => {
+    if (!zoom) return;
+    const onKey = (e) => {
+      if (e.key === "Escape") setZoom(false);
+    };
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [zoom]);
 
   /* reset selections when the route changes */
   useEffect(() => {
@@ -36,6 +51,7 @@ export default function ProductDetail() {
       setFinish(product.finish[0]);
       setQty(1);
       setTab("details");
+      setZoom(false);
     }
   }, [product]);
 
@@ -78,18 +94,25 @@ export default function ProductDetail() {
           {/* ---------- gallery ---------- */}
           <div className="pd-media">
             <div className="pd-frame">
-              <ProductImage
-                src={product.image}
-                fallback={product.imageFallback}
-                alt={product.name}
-                ratio="4 / 3"
-                priority
-              />
+              <button
+                className="pd-zoom-btn"
+                onClick={() => setZoom(true)}
+                aria-label={`${product.name} — badi photo dekhein`}
+              >
+                <ProductImage
+                  src={product.image}
+                  fallback={product.imageFallback}
+                  alt={product.name}
+                  ratio="4 / 3"
+                  priority
+                />
+              </button>
               <div className="pd-flags">
                 {product.badge && <span className="flag flag-dark">{product.badge}</span>}
                 {oos && <span className="flag flag-muted">Out of stock</span>}
               </div>
             </div>
+            <p className="pd-zoom-hint">Photo par click karke badi dekhein 🔍</p>
 
             <div className="pd-spec-strip">
               <div>
@@ -316,6 +339,31 @@ export default function ProductDetail() {
           </section>
         )}
       </div>
+
+      {/* ---------------- full photo lightbox ---------------- */}
+      {zoom && (
+        <div className="lb" role="dialog" aria-modal="true" aria-label={product.name}>
+          <button className="lb-back" onClick={() => setZoom(false)} aria-label="Band karein" />
+          <figure className="lb-fig">
+            <img
+              src={product.image}
+              alt={product.name}
+              onError={(e) => {
+                if (e.currentTarget.src !== product.imageFallback) {
+                  e.currentTarget.src = product.imageFallback;
+                }
+              }}
+            />
+            <figcaption>
+              <span className="pill pill-accent">{product.category}</span>
+              <strong>{product.name}</strong>
+            </figcaption>
+          </figure>
+          <button className="lb-close" onClick={() => setZoom(false)} aria-label="Band karein">
+            ✕
+          </button>
+        </div>
+      )}
     </div>
   );
 }

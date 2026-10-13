@@ -30,7 +30,7 @@ export default function Footer() {
         </div>
 
         <div className="foot-col">
-          <h1 className="foot-head">Product</h1>
+          <h2 className="foot-head">Product</h2>
           <ul>
             <li><Link to="/shop?cat=Charpai">Charpai / Khatia</Link></li>
             <li><Link to="/shop?cat=Bed">Bed</Link></li>
@@ -41,7 +41,7 @@ export default function Footer() {
         </div>
 
         <div className="foot-col">
-          <h1 className="foot-head">About Us</h1>
+          <h2 className="foot-head">About Us</h2>
           <ul>
             <li><Link to="/about">Dukan aur kaam</Link></li>
             <li><Link to="/enquiry">Apna size batayein</Link></li>
@@ -76,7 +76,7 @@ export default function Footer() {
         </div>
 
         <div className="foot-col">
-          <h1 className="foot-head">Address</h1>
+          <h2 className="foot-head">Address</h2>
           <ul className="foot-contact">
             <li>
               <a href={MAPS_LINK} target="_blank" rel="noreferrer">

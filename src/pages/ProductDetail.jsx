@@ -55,6 +55,45 @@ export default function ProductDetail() {
     }
   }, [product]);
 
+  /* Google ke liye: page title + product schema */
+  useEffect(() => {
+    if (!product) return;
+    document.title = `${product.name} — ${money(product.basePrice)} se | Arpit Furniture, Phulpur`;
+    const tag = document.querySelector('meta[name="description"]');
+    if (tag) tag.setAttribute("content", `${product.name}, ${product.category} — naap par banta hai. ${product.desc}`.slice(0, 160));
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: product.name,
+      category: product.category,
+      description: product.desc,
+      image: `https://arpit-furnitur-works.vercel.app${product.imageFallback}`,
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: product.rating,
+        reviewCount: product.reviews,
+      },
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "INR",
+        price: product.basePrice,
+        availability: product.stock > 0 ? "https://schema.org/InStock" : "https://schema.org/OutOfStock",
+      },
+    };
+    let el = document.getElementById("product-schema");
+    if (!el) {
+      el = document.createElement("script");
+      el.id = "product-schema";
+      el.type = "application/ld+json";
+      document.head.appendChild(el);
+    }
+    el.textContent = JSON.stringify(schema);
+    return () => {
+      const old = document.getElementById("product-schema");
+      if (old) old.remove();
+    };
+  }, [product]);
+
   const unitPrice = useMemo(() => {
     if (!product) return 0;
     const w = WOOD_TYPES.find((x) => x.id === wood) || WOOD_TYPES[0];
